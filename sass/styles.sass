@@ -1,0 +1,308 @@
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+
+a
+	text-decoration: none
+
+ul
+	list-style-type: none
+
+body
+	background-color: #fdfdfd
+
+$main-color: #e8603c
+$secondary-color: #f3af9d
+
+.container
+	width: 90%
+	max-width: 940px
+	margin: auto
+
+.logo
+	font-size: 36px
+	display: flex
+	color: $main-color
+	&__part2
+		color: $secondary-color
+
+.nav
+	display: flex
+	a
+		color: #b9b9b9
+		padding: 12px 0
+		&:not(:first-child)
+			margin-left: 22px
+		&:hover
+			color: $main-color
+		&.current
+			color: $main-color
+
+.header
+	height: 78px
+	&__container
+		height: 100%
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+// Hero
+.hero
+	overflow: hidden
+
+.lines
+	position: relative
+	&:before,
+	&:after
+		content: ''
+		position: absolute
+		height: 60px
+		background-color: $secondary-color
+		width: 100%
+		top: 0
+	&:before
+		right: 100%
+		margin-right: 10px
+	&:after
+		left: 100%
+		margin-left: 10px
+
+.slider
+	height: 401px
+	background-color: $secondary-color
+	&__inner
+		position: relative
+
+.slide
+	height: 401px
+	position: relative
+	&__img
+		height: 100%
+		background-repeat: no-repeat
+		background-position: center 8%
+	&__content
+		position: absolute
+		bottom: 32px
+		left: 36px
+		max-width: 413px
+		width: 70%
+		background-color: rgba($main-color, .8)
+		color: #fff
+		font-size: 12px
+		font-family: Arial
+		padding: 22px 19px
+	&__title 
+		font-size: 18px
+		font-family: Bebas
+		font-weight: normal
+		margin-bottom: 16px
+
+.slick-prev,
+.slick-next
+	position: absolute
+	z-index: 999
+	top: 50%
+	transform: translateY(-50%)
+	border: none
+	background: none
+	font-size: 0
+	width: 36px
+	height: 52px
+	left: 26px
+	cursor: pointer
+	&:after
+		content: ''
+		width: 36px
+		height: 52px
+		display: block
+		background-image: url('../img/arrow.png')
+
+.slick-next
+	left: auto
+	right: 26px
+	&:after
+		transform: rotate(180deg)
+
+.slick-dots 
+	z-index: 999
+	position: absolute
+	bottom: 3px
+	left: 50%
+	transform: translateX(-50%)
+	display: flex
+	button
+		font-size: 0
+		margin: 6px
+		border: none
+		width: 16px
+		height: 16px
+		border-radius: 50%
+		cursor: pointer
+
+.slick-active button
+	background-color: #fff
+
+.images
+	margin-top: 17px
+	margin-bottom: 30px
+	&__container
+		display: flex
+		justify-content: space-between
+		flex-wrap: no-wrap
+
+.image
+		display: block
+		width: 140px
+		height: 120px
+		&__img
+			height: 100%
+			width: 100%
+			background-repeat: no-repeat
+			background-position: 77% 25%
+
+// Features
+.features
+	margin-bottom: 46px
+	&__container
+		display: flex
+		justify-content: space-between
+	
+.feature
+	width: 30%
+	&__top
+		height: 46px
+		margin-bottom: 25px
+		display: flex
+		align-items: center
+	&__img
+		margin-right: 16px
+		fill: $main-color
+	&__title
+		color: $main-color
+		font-weight: normal
+		word-spacing: 3px;
+	&__text
+		font-family: Arial
+		font-size: 12px
+		line-height: 18px
+		color: #414141
+		margin-bottom: 16px
+
+.button
+	display: inline-block
+	background-color: $main-color
+	height: 31px
+	padding: 0 13px
+	line-height: 31px
+	color: #fff
+	font-size: 12px
+
+.main__title
+	display: flex
+	font-size: 18px
+	color: $main-color
+	margin-bottom: 23px
+	&:after
+		content: ''
+		flex: 1
+		margin-left: 20px
+		background-image: url('../img/line.png')
+
+.works
+	margin-bottom: 40px
+	&__items
+		display: flex
+		justify-content: space-between
+
+.work
+	display: block
+	min-height: 244px
+	max-width: 220px
+	width: 24%
+	&__img
+		height: 183px
+		background-repeat: no-repeat
+	&__bottom
+		border: 1px solid #dbdbdb
+		border-top: none;
+		line-height: 18px
+		padding: 13px
+	&__title
+		font-size: 16px
+		color: #b9b9b9
+		font-weight: normal
+		word-spacing: 2px
+	&__date
+		font-size: 11px
+		color: $main-color
+
+.footer
+	color: #fff
+	overflow: hidden
+	&__container
+		min-height: 263px
+		background-color: $main-color
+	&__lines
+		position: relative
+		&:before,
+		&:after
+			content: ''
+			position: absolute
+			height: 1000%
+			width: 100%
+			background-color: $secondary-color
+			top: 0
+		&:before
+			right: 100%
+			margin-right: 10px
+		&:after
+			left: 100%
+			margin-left: 10px
+	&__box
+		padding: 39px 36px
+		display: flex
+		justify-content: space-between
+	&__col
+		width: 30%
+	&__title
+		font-weight: normal
+		font-size: 20px
+		margin-bottom: 28px
+		word-spacing: 2px
+	&__text
+		p
+			margin-bottom: 19px
+	&__link
+		color: #fff
+		line-height: 1.4
+
+.tweet
+	margin-bottom: 19px
+	&__user
+		color: #f3b29d
+	&__date
+		display: block
+		display: table
+		margin-top: 10px
+		color: #f3b29d
+	&__follow
+		color: #f3b29d
+
+
+.tweet,
+.footer__text
+	font-size: 12px
+	line-height: 1.4
+	font-family: Arial
+
+.social
+	display: flex
+	flex-wrap: wrap
+	&__link
+		margin-right: 5px
+		margin-bottom: 2px
+		&:not(:last-child)
+
+
+@import media.sass
